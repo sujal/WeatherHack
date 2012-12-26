@@ -24,6 +24,9 @@
 		047B67EC168A949000ACB0FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047B67EA168A949000ACB0FC /* InfoPlist.strings */; };
 		047B67EF168A949000ACB0FC /* WeatherHackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B67EE168A949000ACB0FC /* WeatherHackTests.m */; };
 		047B67FD168A95F400ACB0FC /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B67FB168A95F400ACB0FC /* BLE.m */; };
+		047B6800168A9B2700ACB0FC /* FCWHPrimaryControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B67FF168A9B2700ACB0FC /* FCWHPrimaryControlView.m */; };
+		047B6802168A9CC300ACB0FC /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047B6801168A9CC300ACB0FC /* CoreBluetooth.framework */; };
+		047B680A168AAD2F00ACB0FC /* UIColor+WeatherHackColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B6809168AAD2F00ACB0FC /* UIColor+WeatherHackColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,11 @@
 		047B67FA168A95F400ACB0FC /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
 		047B67FB168A95F400ACB0FC /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
 		047B67FC168A95F400ACB0FC /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
+		047B67FE168A9B2700ACB0FC /* FCWHPrimaryControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCWHPrimaryControlView.h; sourceTree = "<group>"; };
+		047B67FF168A9B2700ACB0FC /* FCWHPrimaryControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCWHPrimaryControlView.m; sourceTree = "<group>"; };
+		047B6801168A9CC300ACB0FC /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		047B6808168AAD2F00ACB0FC /* UIColor+WeatherHackColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WeatherHackColors.h"; sourceTree = "<group>"; };
+		047B6809168AAD2F00ACB0FC /* UIColor+WeatherHackColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WeatherHackColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047B6802168A9CC300ACB0FC /* CoreBluetooth.framework in Frameworks */,
 				047B67BE168A949000ACB0FC /* UIKit.framework in Frameworks */,
 				047B67C0168A949000ACB0FC /* Foundation.framework in Frameworks */,
 				047B67C2168A949000ACB0FC /* CoreGraphics.framework in Frameworks */,
@@ -111,6 +120,7 @@
 		047B67BC168A949000ACB0FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				047B6801168A9CC300ACB0FC /* CoreBluetooth.framework */,
 				047B67BD168A949000ACB0FC /* UIKit.framework */,
 				047B67BF168A949000ACB0FC /* Foundation.framework */,
 				047B67C1168A949000ACB0FC /* CoreGraphics.framework */,
@@ -122,11 +132,16 @@
 		047B67C3168A949000ACB0FC /* WeatherHack */ = {
 			isa = PBXGroup;
 			children = (
+				047B6803168AA54300ACB0FC /* images */,
 				047B67CC168A949000ACB0FC /* FCWHAppDelegate.h */,
 				047B67CD168A949000ACB0FC /* FCWHAppDelegate.m */,
 				047B67D5168A949000ACB0FC /* MainStoryboard.storyboard */,
 				047B67D8168A949000ACB0FC /* FCWHViewController.h */,
 				047B67D9168A949000ACB0FC /* FCWHViewController.m */,
+				047B67FE168A9B2700ACB0FC /* FCWHPrimaryControlView.h */,
+				047B67FF168A9B2700ACB0FC /* FCWHPrimaryControlView.m */,
+				047B6808168AAD2F00ACB0FC /* UIColor+WeatherHackColors.h */,
+				047B6809168AAD2F00ACB0FC /* UIColor+WeatherHackColors.m */,
 				047B67C4168A949000ACB0FC /* Supporting Files */,
 			);
 			path = WeatherHack;
@@ -181,6 +196,13 @@
 				047B67FC168A95F400ACB0FC /* BLEDefines.h */,
 			);
 			path = BLE_Framework;
+			sourceTree = "<group>";
+		};
+		047B6803168AA54300ACB0FC /* images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +320,8 @@
 				047B67CE168A949000ACB0FC /* FCWHAppDelegate.m in Sources */,
 				047B67DA168A949000ACB0FC /* FCWHViewController.m in Sources */,
 				047B67FD168A95F400ACB0FC /* BLE.m in Sources */,
+				047B6800168A9B2700ACB0FC /* FCWHPrimaryControlView.m in Sources */,
+				047B680A168AAD2F00ACB0FC /* UIColor+WeatherHackColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BLE.h"
+#import "FCWHPrimaryControlView.h"
 
-@interface FCWHViewController : UIViewController <UIScrollViewDelegate>
+@interface FCWHViewController : UIViewController <UIScrollViewDelegate,BLEDelegate> {
+    BOOL requestInFlight;
+}
+
+@property (nonatomic,retain) BLE* bleShield;
+
+@property (nonatomic,weak) IBOutlet UIScrollView* scrollView;
+@property (nonatomic,weak) IBOutlet FCWHPrimaryControlView* controlView;
+@property (nonatomic,weak) IBOutlet UILabel* bottomControlLabel;
+
+@property (nonatomic,strong) NSTimer* weatherPollingTimer;
 
 @end
