@@ -23,6 +23,7 @@
 		047B67E4168A949000ACB0FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047B67BF168A949000ACB0FC /* Foundation.framework */; };
 		047B67EC168A949000ACB0FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 047B67EA168A949000ACB0FC /* InfoPlist.strings */; };
 		047B67EF168A949000ACB0FC /* WeatherHackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B67EE168A949000ACB0FC /* WeatherHackTests.m */; };
+		047B67FD168A95F400ACB0FC /* BLE.m in Sources */ = {isa = PBXBuildFile; fileRef = 047B67FB168A95F400ACB0FC /* BLE.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,9 @@
 		047B67EB168A949000ACB0FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		047B67ED168A949000ACB0FC /* WeatherHackTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherHackTests.h; sourceTree = "<group>"; };
 		047B67EE168A949000ACB0FC /* WeatherHackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherHackTests.m; sourceTree = "<group>"; };
+		047B67FA168A95F400ACB0FC /* BLE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLE.h; sourceTree = "<group>"; };
+		047B67FB168A95F400ACB0FC /* BLE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLE.m; sourceTree = "<group>"; };
+		047B67FC168A95F400ACB0FC /* BLEDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLEDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 		047B67AE168A949000ACB0FC = {
 			isa = PBXGroup;
 			children = (
+				047B67F8168A95BA00ACB0FC /* thirdparty */,
 				047B67C3168A949000ACB0FC /* WeatherHack */,
 				047B67E7168A949000ACB0FC /* WeatherHackTests */,
 				047B67BC168A949000ACB0FC /* Frameworks */,
@@ -158,6 +163,24 @@
 				047B67EA168A949000ACB0FC /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		047B67F8168A95BA00ACB0FC /* thirdparty */ = {
+			isa = PBXGroup;
+			children = (
+				047B67F9168A95F400ACB0FC /* BLE_Framework */,
+			);
+			path = thirdparty;
+			sourceTree = "<group>";
+		};
+		047B67F9168A95F400ACB0FC /* BLE_Framework */ = {
+			isa = PBXGroup;
+			children = (
+				047B67FA168A95F400ACB0FC /* BLE.h */,
+				047B67FB168A95F400ACB0FC /* BLE.m */,
+				047B67FC168A95F400ACB0FC /* BLEDefines.h */,
+			);
+			path = BLE_Framework;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,6 +297,7 @@
 				047B67CA168A949000ACB0FC /* main.m in Sources */,
 				047B67CE168A949000ACB0FC /* FCWHAppDelegate.m in Sources */,
 				047B67DA168A949000ACB0FC /* FCWHViewController.m in Sources */,
+				047B67FD168A95F400ACB0FC /* BLE.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

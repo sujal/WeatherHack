@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FCWHViewController : UIViewController
+@interface FCWHViewController : UIViewController <UIScrollViewDelegate>
 
 @end
