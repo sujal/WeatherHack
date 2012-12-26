@@ -19,6 +19,7 @@
 - (void) sendWeatherRequest;
 - (void) beginPollingForWeather;
 - (NSString*)labelForBottomControl;
+- (void) weatherPollFired:(NSTimer*)timer;
 @end
 
 @implementation FCWHViewController
@@ -165,6 +166,8 @@
     if (requestInFlight)
         return;
     
+    NSLog(@"sending weather request");
+    
     requestInFlight = YES;
     NSData* requestData = nil;
     requestData = [@"T0" dataUsingEncoding:NSUTF8StringEncoding];
@@ -206,6 +209,8 @@
     self.controlView.controlState = FCWHControlStateDisconnected;
     if (self.bleShield.peripherals)
         self.bleShield.peripherals = nil;
+    [self.weatherPollingTimer invalidate];
+    self.weatherPollingTimer = nil;
 
 //    self.bleShield = nil;
 }
